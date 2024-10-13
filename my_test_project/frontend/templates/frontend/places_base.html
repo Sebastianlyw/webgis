@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% load static %}
+{% block css_links %}
+<link rel="stylesheet" href="{% static 'libs/leaflet/leaflet.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block js_links %}
+<script src="{% static 'libs/leaflet/leaflet.js' %}"></script>
+<script src="{% static 'javascript/main.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="grid-container">
+    <div class="grid-1">
+        <div id="map"></div>
+    </div>
+    <div class="grid-2">
+        <div class="column-men" id="menu-information">
+            <p id="menu_title">Welcome to New Zealand Landscapes Map</p>
+            <img src="./media/place_images/landscape.jpg" alt="New Zealand image" id="placeimage">
+            <p id="menu_text"></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
